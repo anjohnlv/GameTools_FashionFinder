@@ -88,17 +88,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MBProgressHUD : UIView
 
 /**
- *  自定义，在顶层View上显示hud。
- */
-+ (void)showHUD;
-+ (void)showMessageError:(NSString *)msg;
-+ (void)showMessage:(NSString *)msg;
-+ (void)showMessage:(NSString *)msg autoHidden:(BOOL)hidden;
-/**
- *  自定义，隐藏在顶层View的hud。
- */
-+ (void)hideHUD;
-/**
  * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
  *
  * @note This method sets removeFromSuperViewOnHide. The HUD will automatically be removed from the view hierarchy when hidden.

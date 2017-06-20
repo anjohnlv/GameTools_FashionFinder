@@ -14,20 +14,10 @@
 		2B091E5C1E8C93FA005C74F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B091E5A1E8C93FA005C74F0 /* LaunchScreen.storyboard */; };
 		2B091E651E8C95B9005C74F0 /* Fashion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091E641E8C95B9005C74F0 /* Fashion.m */; };
 		2B091E6A1E8CA9AE005C74F0 /* Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091E691E8CA9AE005C74F0 /* Sandbox.m */; };
-		2B091ECE1E8CAA4E005C74F0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EB61E8CAA4E005C74F0 /* MASCompositeConstraint.m */; };
-		2B091ECF1E8CAA4E005C74F0 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EB91E8CAA4E005C74F0 /* MASConstraint.m */; };
-		2B091ED01E8CAA4E005C74F0 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EBB1E8CAA4E005C74F0 /* MASConstraintMaker.m */; };
-		2B091ED11E8CAA4E005C74F0 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EBD1E8CAA4E005C74F0 /* MASLayoutConstraint.m */; };
-		2B091ED21E8CAA4E005C74F0 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EC11E8CAA4E005C74F0 /* MASViewAttribute.m */; };
-		2B091ED31E8CAA4E005C74F0 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EC31E8CAA4E005C74F0 /* MASViewConstraint.m */; };
-		2B091ED41E8CAA4E005C74F0 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EC51E8CAA4E005C74F0 /* NSArray+MASAdditions.m */; };
-		2B091ED51E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EC81E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		2B091ED61E8CAA4E005C74F0 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091ECA1E8CAA4E005C74F0 /* View+MASAdditions.m */; };
-		2B091ED71E8CAA4E005C74F0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091ECD1E8CAA4E005C74F0 /* ViewController+MASAdditions.m */; };
 		2B091EDA1E8CE8FA005C74F0 /* FashionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091ED91E8CE8FA005C74F0 /* FashionData.m */; };
-		2B091EE01E8CFAA6005C74F0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B091EDF1E8CFAA6005C74F0 /* MBProgressHUD.m */; };
 		2B63A9411EE7D3640050A148 /* FashionCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B63A9401EE7D3640050A148 /* FashionCardViewController.m */; };
 		2B6513151EF8C975007AED6A /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B6513141EF8C975007AED6A /* launch.png */; };
+		2B65131E1EF90139007AED6A /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65131D1EF90139007AED6A /* MBProgressHUD+Extension.m */; };
 		2B6D82C61EE797A90055C130 /* FashionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D82C51EE797A90055C130 /* FashionConfig.m */; };
 		2B6D82CB1EE79E750055C130 /* FashionInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D82CA1EE79E750055C130 /* FashionInsertViewController.m */; };
 		2B853EBC1EE4F4020082C1FF /* PropertyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B853EBB1EE4F4020082C1FF /* PropertyCollectionView.m */; };
@@ -35,6 +25,7 @@
 		2B856B0F1EF8AACB0061145D /* fashions_female.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B856B0E1EF8AACB0061145D /* fashions_female.plist */; };
 		2B856B2F1EF8C0C50061145D /* fashions_male.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B856B2E1EF8C0C50061145D /* fashions_male.plist */; };
 		2BE2D3711E971829007D746D /* FashionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2D3701E971829007D746D /* FashionTableView.m */; };
+		784B25784019A58E82389E63 /* libPods-FashionFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,40 +41,15 @@
 		2B091E641E8C95B9005C74F0 /* Fashion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fashion.m; sourceTree = "<group>"; };
 		2B091E681E8CA9AE005C74F0 /* Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sandbox.h; sourceTree = "<group>"; };
 		2B091E691E8CA9AE005C74F0 /* Sandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sandbox.m; sourceTree = "<group>"; };
-		2B091EB51E8CAA4E005C74F0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
-		2B091EB61E8CAA4E005C74F0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
-		2B091EB71E8CAA4E005C74F0 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
-		2B091EB81E8CAA4E005C74F0 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
-		2B091EB91E8CAA4E005C74F0 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
-		2B091EBA1E8CAA4E005C74F0 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
-		2B091EBB1E8CAA4E005C74F0 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
-		2B091EBC1E8CAA4E005C74F0 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
-		2B091EBD1E8CAA4E005C74F0 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
-		2B091EBE1E8CAA4E005C74F0 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
-		2B091EBF1E8CAA4E005C74F0 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
-		2B091EC01E8CAA4E005C74F0 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
-		2B091EC11E8CAA4E005C74F0 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		2B091EC21E8CAA4E005C74F0 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
-		2B091EC31E8CAA4E005C74F0 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
-		2B091EC41E8CAA4E005C74F0 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		2B091EC51E8CAA4E005C74F0 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		2B091EC61E8CAA4E005C74F0 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		2B091EC71E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		2B091EC81E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		2B091EC91E8CAA4E005C74F0 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
-		2B091ECA1E8CAA4E005C74F0 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
-		2B091ECB1E8CAA4E005C74F0 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		2B091ECC1E8CAA4E005C74F0 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		2B091ECD1E8CAA4E005C74F0 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		2B091ED81E8CE8FA005C74F0 /* FashionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionData.h; sourceTree = "<group>"; };
 		2B091ED91E8CE8FA005C74F0 /* FashionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionData.m; sourceTree = "<group>"; };
 		2B091EDB1E8CF86A005C74F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		2B091EDC1E8CF86A005C74F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		2B091EDE1E8CFAA6005C74F0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		2B091EDF1E8CFAA6005C74F0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2B63A93F1EE7D3640050A148 /* FashionCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionCardViewController.h; sourceTree = "<group>"; };
 		2B63A9401EE7D3640050A148 /* FashionCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionCardViewController.m; sourceTree = "<group>"; };
 		2B6513141EF8C975007AED6A /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		2B65131C1EF90139007AED6A /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		2B65131D1EF90139007AED6A /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		2B6D82C41EE797A90055C130 /* FashionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionConfig.h; sourceTree = "<group>"; };
 		2B6D82C51EE797A90055C130 /* FashionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionConfig.m; sourceTree = "<group>"; };
 		2B6D82C91EE79E750055C130 /* FashionInsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionInsertViewController.h; sourceTree = "<group>"; };
@@ -96,6 +62,9 @@
 		2B856B2E1EF8C0C50061145D /* fashions_male.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_male.plist; sourceTree = "<group>"; };
 		2BE2D36F1E971829007D746D /* FashionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionTableView.h; sourceTree = "<group>"; };
 		2BE2D3701E971829007D746D /* FashionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionTableView.m; sourceTree = "<group>"; };
+		52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FashionFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7410AC14A08A3AD1C34D335 /* Pods-FashionFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FashionFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FashionFinder/Pods-FashionFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		FE59BA6D5599B20324FD499C /* Pods-FashionFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FashionFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FashionFinder/Pods-FashionFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,17 +72,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784B25784019A58E82389E63 /* libPods-FashionFinder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		169B790C8A3036A19E354CBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7410AC14A08A3AD1C34D335 /* Pods-FashionFinder.debug.xcconfig */,
+				FE59BA6D5599B20324FD499C /* Pods-FashionFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2B091E3D1E8C93FA005C74F0 = {
 			isa = PBXGroup;
 			children = (
 				2B091E481E8C93FA005C74F0 /* FashionFinder */,
 				2B091E471E8C93FA005C74F0 /* Products */,
+				169B790C8A3036A19E354CBA /* Pods */,
+				4D40E4343FD3F3F11FB94071 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,8 +109,6 @@
 		2B091E481E8C93FA005C74F0 /* FashionFinder */ = {
 			isa = PBXGroup;
 			children = (
-				2B091EDD1E8CFAA6005C74F0 /* MBProgressHUD */,
-				2B091EB41E8CAA4E005C74F0 /* Masonry */,
 				2B091E4C1E8C93FA005C74F0 /* AppDelegate.h */,
 				2B091E4D1E8C93FA005C74F0 /* AppDelegate.m */,
 				2B853EBD1EE4F9610082C1FF /* FashionQueryViewController.h */,
@@ -150,6 +129,8 @@
 				2B091ED91E8CE8FA005C74F0 /* FashionData.m */,
 				2B091E681E8CA9AE005C74F0 /* Sandbox.h */,
 				2B091E691E8CA9AE005C74F0 /* Sandbox.m */,
+				2B65131C1EF90139007AED6A /* MBProgressHUD+Extension.h */,
+				2B65131D1EF90139007AED6A /* MBProgressHUD+Extension.m */,
 				2B091E521E8C93FA005C74F0 /* Main.storyboard */,
 				2B091E581E8C93FA005C74F0 /* Assets.xcassets */,
 				2B6513141EF8C975007AED6A /* launch.png */,
@@ -170,45 +151,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2B091EB41E8CAA4E005C74F0 /* Masonry */ = {
+		4D40E4343FD3F3F11FB94071 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B091EB51E8CAA4E005C74F0 /* MASCompositeConstraint.h */,
-				2B091EB61E8CAA4E005C74F0 /* MASCompositeConstraint.m */,
-				2B091EB71E8CAA4E005C74F0 /* MASConstraint+Private.h */,
-				2B091EB81E8CAA4E005C74F0 /* MASConstraint.h */,
-				2B091EB91E8CAA4E005C74F0 /* MASConstraint.m */,
-				2B091EBA1E8CAA4E005C74F0 /* MASConstraintMaker.h */,
-				2B091EBB1E8CAA4E005C74F0 /* MASConstraintMaker.m */,
-				2B091EBC1E8CAA4E005C74F0 /* MASLayoutConstraint.h */,
-				2B091EBD1E8CAA4E005C74F0 /* MASLayoutConstraint.m */,
-				2B091EBE1E8CAA4E005C74F0 /* Masonry.h */,
-				2B091EBF1E8CAA4E005C74F0 /* MASUtilities.h */,
-				2B091EC01E8CAA4E005C74F0 /* MASViewAttribute.h */,
-				2B091EC11E8CAA4E005C74F0 /* MASViewAttribute.m */,
-				2B091EC21E8CAA4E005C74F0 /* MASViewConstraint.h */,
-				2B091EC31E8CAA4E005C74F0 /* MASViewConstraint.m */,
-				2B091EC41E8CAA4E005C74F0 /* NSArray+MASAdditions.h */,
-				2B091EC51E8CAA4E005C74F0 /* NSArray+MASAdditions.m */,
-				2B091EC61E8CAA4E005C74F0 /* NSArray+MASShorthandAdditions.h */,
-				2B091EC71E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				2B091EC81E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				2B091EC91E8CAA4E005C74F0 /* View+MASAdditions.h */,
-				2B091ECA1E8CAA4E005C74F0 /* View+MASAdditions.m */,
-				2B091ECB1E8CAA4E005C74F0 /* View+MASShorthandAdditions.h */,
-				2B091ECC1E8CAA4E005C74F0 /* ViewController+MASAdditions.h */,
-				2B091ECD1E8CAA4E005C74F0 /* ViewController+MASAdditions.m */,
+				52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */,
 			);
-			path = Masonry;
-			sourceTree = "<group>";
-		};
-		2B091EDD1E8CFAA6005C74F0 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				2B091EDE1E8CFAA6005C74F0 /* MBProgressHUD.h */,
-				2B091EDF1E8CFAA6005C74F0 /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B091E601E8C93FA005C74F0 /* Build configuration list for PBXNativeTarget "FashionFinder" */;
 			buildPhases = (
+				58CF912F4AC2BC0848E4C785 /* [CP] Check Pods Manifest.lock */,
 				2B091E421E8C93FA005C74F0 /* Sources */,
 				2B091E431E8C93FA005C74F0 /* Frameworks */,
 				2B091E441E8C93FA005C74F0 /* Resources */,
+				9F99A01CC5EB75FDB7948D30 /* [CP] Embed Pods Frameworks */,
+				4CF34EB08A130818A836E620 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,32 +231,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CF34EB08A130818A836E620 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FashionFinder/Pods-FashionFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58CF912F4AC2BC0848E4C785 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F99A01CC5EB75FDB7948D30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FashionFinder/Pods-FashionFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B091E421E8C93FA005C74F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B091ED41E8CAA4E005C74F0 /* NSArray+MASAdditions.m in Sources */,
+				2B65131E1EF90139007AED6A /* MBProgressHUD+Extension.m in Sources */,
 				2BE2D3711E971829007D746D /* FashionTableView.m in Sources */,
-				2B091ED31E8CAA4E005C74F0 /* MASViewConstraint.m in Sources */,
 				2B853EBF1EE4F9610082C1FF /* FashionQueryViewController.m in Sources */,
-				2B091ED01E8CAA4E005C74F0 /* MASConstraintMaker.m in Sources */,
-				2B091ED61E8CAA4E005C74F0 /* View+MASAdditions.m in Sources */,
 				2B091E4E1E8C93FA005C74F0 /* AppDelegate.m in Sources */,
-				2B091ECF1E8CAA4E005C74F0 /* MASConstraint.m in Sources */,
-				2B091ED21E8CAA4E005C74F0 /* MASViewAttribute.m in Sources */,
 				2B6D82C61EE797A90055C130 /* FashionConfig.m in Sources */,
-				2B091ED51E8CAA4E005C74F0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				2B853EBC1EE4F4020082C1FF /* PropertyCollectionView.m in Sources */,
 				2B091E6A1E8CA9AE005C74F0 /* Sandbox.m in Sources */,
-				2B091ECE1E8CAA4E005C74F0 /* MASCompositeConstraint.m in Sources */,
 				2B63A9411EE7D3640050A148 /* FashionCardViewController.m in Sources */,
-				2B091ED11E8CAA4E005C74F0 /* MASLayoutConstraint.m in Sources */,
 				2B091E651E8C95B9005C74F0 /* Fashion.m in Sources */,
 				2B6D82CB1EE79E750055C130 /* FashionInsertViewController.m in Sources */,
-				2B091EE01E8CFAA6005C74F0 /* MBProgressHUD.m in Sources */,
 				2B091EDA1E8CE8FA005C74F0 /* FashionData.m in Sources */,
-				2B091ED71E8CAA4E005C74F0 /* ViewController+MASAdditions.m in Sources */,
 				2B091E4B1E8C93FA005C74F0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,10 +417,12 @@
 		};
 		2B091E611E8C93FA005C74F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7410AC14A08A3AD1C34D335 /* Pods-FashionFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUHEZP9NQR;
 				INFOPLIST_FILE = FashionFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anjohnlv.FashionFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,10 +431,12 @@
 		};
 		2B091E621E8C93FA005C74F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE59BA6D5599B20324FD499C /* Pods-FashionFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUHEZP9NQR;
 				INFOPLIST_FILE = FashionFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anjohnlv.FashionFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";

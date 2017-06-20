@@ -9,7 +9,6 @@
 #import "Fashion.h"
 #import "Sandbox.h"
 #import "FashionConfig.h"
-#import "MBProgressHUD.h"
 
 @implementation FashionCategory
 -(instancetype)initWithType:(FashionCategoryType)type {
@@ -340,13 +339,13 @@
                 case 4: {
                     self.materialType = FashionMaterialTypeSimple;
                     self.extensionsType = @[@(FashionExtensionTypeJianghu)];
-                    [MBProgressHUD showMessage:@"黑，佩剑"];
+                    [MBProgressHUD showToast:@"黑，佩剑"];
                 }
                     break;
                 case 5: {
                     self.materialType = FashionMaterialTypeSimple;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
-                    [MBProgressHUD showMessage:@"蒙古，匈奴"];
+                    [MBProgressHUD showToast:@"蒙古，匈奴"];
                 }
                     break;
                 case 6: {
@@ -358,13 +357,13 @@
                 case 7: {
                     self.materialType = FashionMaterialTypeSimple;
                     self.extensionsType = @[@(FashionExtensionTypeSangfu)];
-                    [MBProgressHUD showMessage:@"白"];
+                    [MBProgressHUD showToast:@"白"];
                 }
                     break;
                 case 8: {
                     self.styleType = FashionStyleTypeElegant;
                     self.extensionsType = @[@(FashionExtensionTypeWenren)];
-                    [MBProgressHUD showMessage:@"书籍"];
+                    [MBProgressHUD showToast:@"书籍"];
                 }
                     break;
                 default:
@@ -377,7 +376,7 @@
                     case 0: {
                         self.materialType = FashionMaterialTypeSimple;
                         self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
-                        [MBProgressHUD showMessage:@"田园风"];
+                        [MBProgressHUD showToast:@"田园风"];
                     }
                         break;
                     case 1: {
@@ -388,7 +387,7 @@
                         }else{
                             self.styleType = FashionStyleTypeElegant;
                             self.materialType = FashionMaterialTypeSimple;
-                            [MBProgressHUD showMessage:@"汉代"];
+                            [MBProgressHUD showToast:@"汉代"];
                         }
                     }
                         break;
@@ -396,20 +395,20 @@
                         self.styleType = FashionStyleTypeDignified;
                         self.materialType = FashionMaterialTypeLuxury;
                         self.extensionsType = @[@(FashionExtensionTypeLifu)];
-                        [MBProgressHUD showMessage:@"汉代"];
+                        [MBProgressHUD showToast:@"汉代"];
                     }
                         break;
                     case 3: {
                         self.materialType = FashionStyleTypeRomantic;
                         self.extensionsType = @[@(FashionExtensionTypeWudao)];
-                        [MBProgressHUD showMessage:@"萧"];
+                        [MBProgressHUD showToast:@"萧"];
                     }
                         break;
                     case 4: {
                         self.styleType = FashionStyleTypeDignified;
                         self.materialType = FashionMaterialTypeLuxury;
                         self.extensionsType = @[@(FashionExtensionTypeGuanfu)];
-                        [MBProgressHUD showMessage:@"紫"];
+                        [MBProgressHUD showToast:@"紫"];
                     }
                         break;
                     case 5: {
@@ -417,7 +416,7 @@
                         self.materialType = FashionMaterialTypeSimple;
                         self.temperatureType = FashionTemperatureTypeWarm;
                         self.extensionsType = @[@(FashionExtensionTypeSangfu)];
-                        [MBProgressHUD showMessage:@"白"];
+                        [MBProgressHUD showToast:@"白"];
                     }
                         break;
                     case 6: {
@@ -434,7 +433,7 @@
                         self.styleType = FashionStyleTypeDignified;
                         self.materialType = FashionMaterialTypeLuxury;
                         self.extensionsType = @[@(FashionExtensionTypeLifu)];
-                        [MBProgressHUD showMessage:@"汉代"];
+                        [MBProgressHUD showToast:@"汉代"];
                     }
                         break;
                     case 8: {
@@ -446,7 +445,7 @@
                     case 9: {
                         self.materialType = FashionMaterialTypeSimple;
                         self.extensionsType = @[@(FashionExtensionTypeHunqing)];
-                        [MBProgressHUD showMessage:@"红"];
+                        [MBProgressHUD showToast:@"红"];
                     }
                         break;
                     default:
@@ -460,20 +459,20 @@
                     self.materialType = FashionMaterialTypeSimple;
                     self.temperatureType = FashionTemperatureTypeWarm;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
-                    [MBProgressHUD showMessage:@"异域风"];
+                    [MBProgressHUD showToast:@"异域风"];
                 }
                     break;
                 case 1: {
                     self.styleType = FashionStyleTypeBrave;
                     self.temperatureType = FashionTemperatureTypeWarm;
                     self.extensionsType = @[@(FashionExtensionTypeJianghu)];
-                    [MBProgressHUD showMessage:@"黑"];
+                    [MBProgressHUD showToast:@"黑"];
                 }
                     break;
                 case 2: {
                     self.materialType = FashionMaterialTypeLuxury;
                     self.extensionsType = @[@(FashionExtensionTypeLifu)];
-                    [MBProgressHUD showMessage:@"紫"];
+                    [MBProgressHUD showToast:@"紫"];
                 }
                     break;
                 case 3: {
@@ -486,13 +485,13 @@
                     self.materialType = FashionMaterialTypeLuxury;
                     self.temperatureType = FashionTemperatureTypeWarm;
                     self.extensionsType = @[@(FashionExtensionTypeHunqing)];
-                    [MBProgressHUD showMessage:@"红"];
+                    [MBProgressHUD showToast:@"红"];
                 }
                     break;
                 case 5: {
                     self.styleType = FashionStyleTypeBrave;
                     self.extensionsType = @[@(FashionExtensionTypeWudao),@(FashionExtensionTypeJianghu)];
-                    [MBProgressHUD showMessage:@"佩剑"];
+                    [MBProgressHUD showToast:@"佩剑"];
                 }
                     break;
                 case 6: {
@@ -504,19 +503,19 @@
                     self.styleType = FashionStyleTypeDignified;
                     self.temperatureType = FashionTemperatureTypeWarm;
                     self.extensionsType = @[@(FashionExtensionTypeGuanfu)];
-                    [MBProgressHUD showMessage:@"威严&勇猛"];
+                    [MBProgressHUD showToast:@"威严&勇猛"];
                 }
                     break;
                 case 8: {
                     self.materialType = FashionMaterialTypeSimple;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeGuanfu)];
-                    [MBProgressHUD showMessage:@"中国风"];
+                    [MBProgressHUD showToast:@"中国风"];
                 }
                     break;
                 case 9: {
                     self.materialType = FashionMaterialTypeSimple;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
-                    [MBProgressHUD showMessage:@"田园风"];
+                    [MBProgressHUD showToast:@"田园风"];
                 }
                     break;
                 default:
@@ -569,7 +568,7 @@
                     self.materialType = FashionMaterialTypeLuxury;
                     self.temperatureType = FashionTemperatureTypeNormal;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
-                    [MBProgressHUD showMessage:@"白"];
+                    [MBProgressHUD showToast:@"白"];
                 }
                     break;
                 case 5: {
@@ -664,7 +663,7 @@
                     self.materialType = FashionMaterialTypeLuxury;
                     self.temperatureType = FashionTemperatureTypeNormal;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
-                    [MBProgressHUD showMessage:@"白"];
+                    [MBProgressHUD showToast:@"白"];
                 }
                     break;
                 case 5: {
@@ -857,7 +856,7 @@
                     self.styleType = FashionStyleTypeElegant;
                     self.materialType = FashionMaterialTypeSimple;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
-                    [MBProgressHUD showMessage:@"丧服扣分"];
+                    [MBProgressHUD showToast:@"丧服扣分"];
                 }
                     break;
                 case 7: {
@@ -873,7 +872,7 @@
                     self.styleType = FashionStyleTypeDignified;
                     self.materialType = FashionMaterialTypeLuxury;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
-                    [MBProgressHUD showMessage:@"丧服扣分"];
+                    [MBProgressHUD showToast:@"丧服扣分"];
                 }
                     break;
                 case 9: {

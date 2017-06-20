@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+Extension.h"
 typedef NS_ENUM(NSInteger, FashionCategoryType) {
     FashionCategoryTypeUnknown = 0,
     FashionCategoryTypeHairstyle,

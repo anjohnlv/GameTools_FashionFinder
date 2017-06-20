@@ -161,20 +161,20 @@
     self.fashion.name = _fashion.name;
     BOOL suc = [[FashionData shareFashion] saveNewFashion:self.fashion];
     if (!suc) {
-        [MBProgressHUD showMessage:@"哦豁，异常了哒"];
+        [MBProgressHUD showToast:@"哦豁，异常了哒"];
     }else {
-        [MBProgressHUD showMessage:@"已记录"];
+        [MBProgressHUD showToast:@"已记录"];
         [self clearUI];
     }
 }
 
 -(BOOL)checkFashion {
     if ([_fashion.name length]==0) {
-        [MBProgressHUD showMessage:@"缺名字"];
+        [MBProgressHUD showToast:@"缺名字"];
         return NO;
     }
     if (_fashion.category.type == FashionCategoryTypeUnknown || _fashion.age.type == FashionAgeTypeNull || _fashion.style.type == FashionStyleTypeNull || _fashion.temperature.type == FashionTemperatureTypeNull || [_fashion.extensions count]==0) {
-        [MBProgressHUD showMessage:@"缺类别"];
+        [MBProgressHUD showToast:@"缺类别"];
         return NO;
     }
     return YES;
