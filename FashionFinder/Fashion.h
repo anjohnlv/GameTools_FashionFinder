@@ -100,6 +100,7 @@ typedef NS_ENUM(NSInteger, FashionBiography) {
     FashionBiographyXunlong4,
     FashionBiographyXunlong5,
     FashionBiographyXunlong6,
+    FashionBiographyXunlong7,
 };
 
 @interface FashionCategory : NSObject

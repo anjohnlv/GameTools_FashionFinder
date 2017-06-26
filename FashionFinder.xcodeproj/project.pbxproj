@@ -22,8 +22,8 @@
 		2B6D82CB1EE79E750055C130 /* FashionInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D82CA1EE79E750055C130 /* FashionInsertViewController.m */; };
 		2B853EBC1EE4F4020082C1FF /* PropertyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B853EBB1EE4F4020082C1FF /* PropertyCollectionView.m */; };
 		2B853EBF1EE4F9610082C1FF /* FashionQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B853EBE1EE4F9610082C1FF /* FashionQueryViewController.m */; };
-		2B856B0F1EF8AACB0061145D /* fashions_female.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B856B0E1EF8AACB0061145D /* fashions_female.plist */; };
-		2B856B2F1EF8C0C50061145D /* fashions_male.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B856B2E1EF8C0C50061145D /* fashions_male.plist */; };
+		2BB39ED71F00D852001F163D /* fashions_female.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BB39ED51F00D852001F163D /* fashions_female.plist */; };
+		2BB39ED81F00D852001F163D /* fashions_male.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BB39ED61F00D852001F163D /* fashions_male.plist */; };
 		2BE2D3711E971829007D746D /* FashionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2D3701E971829007D746D /* FashionTableView.m */; };
 		784B25784019A58E82389E63 /* libPods-FashionFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */; };
 /* End PBXBuildFile section */
@@ -58,8 +58,8 @@
 		2B853EBB1EE4F4020082C1FF /* PropertyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyCollectionView.m; sourceTree = "<group>"; };
 		2B853EBD1EE4F9610082C1FF /* FashionQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionQueryViewController.h; sourceTree = "<group>"; };
 		2B853EBE1EE4F9610082C1FF /* FashionQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionQueryViewController.m; sourceTree = "<group>"; };
-		2B856B0E1EF8AACB0061145D /* fashions_female.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_female.plist; sourceTree = "<group>"; };
-		2B856B2E1EF8C0C50061145D /* fashions_male.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_male.plist; sourceTree = "<group>"; };
+		2BB39ED51F00D852001F163D /* fashions_female.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_female.plist; sourceTree = "<group>"; };
+		2BB39ED61F00D852001F163D /* fashions_male.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_male.plist; sourceTree = "<group>"; };
 		2BE2D36F1E971829007D746D /* FashionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionTableView.h; sourceTree = "<group>"; };
 		2BE2D3701E971829007D746D /* FashionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionTableView.m; sourceTree = "<group>"; };
 		52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FashionFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,8 +136,8 @@
 				2B6513141EF8C975007AED6A /* launch.png */,
 				2B091E5A1E8C93FA005C74F0 /* LaunchScreen.storyboard */,
 				2B091E5D1E8C93FA005C74F0 /* Info.plist */,
-				2B856B0E1EF8AACB0061145D /* fashions_female.plist */,
-				2B856B2E1EF8C0C50061145D /* fashions_male.plist */,
+				2BB39ED51F00D852001F163D /* fashions_female.plist */,
+				2BB39ED61F00D852001F163D /* fashions_male.plist */,
 				2B091E491E8C93FA005C74F0 /* Supporting Files */,
 			);
 			path = FashionFinder;
@@ -222,9 +222,9 @@
 			files = (
 				2B6513151EF8C975007AED6A /* launch.png in Resources */,
 				2B091E5C1E8C93FA005C74F0 /* LaunchScreen.storyboard in Resources */,
-				2B856B2F1EF8C0C50061145D /* fashions_male.plist in Resources */,
-				2B856B0F1EF8AACB0061145D /* fashions_female.plist in Resources */,
+				2BB39ED71F00D852001F163D /* fashions_female.plist in Resources */,
 				2B091E591E8C93FA005C74F0 /* Assets.xcassets in Resources */,
+				2BB39ED81F00D852001F163D /* fashions_male.plist in Resources */,
 				2B091E541E8C93FA005C74F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

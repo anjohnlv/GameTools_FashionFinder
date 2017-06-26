@@ -100,7 +100,7 @@
     }];
     [_fashionTableView reloadData];
     
-    for (int i=0; i<12; i++) {
+    for (int i=0; i<13; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         NSString *title;
         switch (i) {
@@ -140,6 +140,8 @@
             case 11:
                 title = @"寻龙\n传陆";
                 break;
+            case 12:
+                title = @"寻龙\n传柒";
         }
         [button setTitle:title forState:UIControlStateNormal];
         [[button titleLabel]setFont:[UIFont systemFontOfSize:10]];
@@ -150,8 +152,8 @@
         [button mas_makeConstraints:^(MASConstraintMaker *make){
             make.top.equalTo(_extensionCollectionView.mas_bottom);
             make.bottom.equalTo(_fashionTableView.mas_top);
-            make.width.equalTo(self.view).multipliedBy(1.0/12);
-            make.centerX.equalTo(self.view).multipliedBy((1.0+i*2)/12);
+            make.width.equalTo(self.view).multipliedBy(1.0/13);
+            make.centerX.equalTo(self.view).multipliedBy((1.0+i*2)/13);
         }];
     }
 }
@@ -166,6 +168,20 @@
 
 #pragma mark - find
 -(void)findFashion {
+    NSIndexPath *ageIndexPath = [NSIndexPath indexPathForRow:_fashion.age.type inSection:0];
+    NSIndexPath *styleIndexPath = [NSIndexPath indexPathForRow:_fashion.style.type inSection:0];
+    NSIndexPath *materialIndexPath = [NSIndexPath indexPathForRow:_fashion.material.type inSection:0];
+    NSIndexPath *temperatureIndexPath = [NSIndexPath indexPathForRow:_fashion.temperature.type inSection:0];
+    NSMutableArray *extensionsIndexPath = [NSMutableArray new];
+    for (FashionExtension *extension in _fashion.extensions) {
+        NSIndexPath *extensionIndexPath = [NSIndexPath indexPathForRow:extension.type inSection:0];
+        [extensionsIndexPath addObject:extensionIndexPath];
+    }
+    _ageCollectionView.selectedIndexPaths = [NSMutableArray arrayWithArray:@[ageIndexPath]];
+    _styleCollectionView.selectedIndexPaths = [NSMutableArray arrayWithArray:@[styleIndexPath]];
+    _materialCollectionView.selectedIndexPaths = [NSMutableArray arrayWithArray:@[materialIndexPath]];
+    _temperatureCollectionView.selectedIndexPaths = [NSMutableArray arrayWithArray:@[temperatureIndexPath]];
+    _extensionCollectionView.selectedIndexPaths = extensionsIndexPath;
     for (int i=0; i<[_allFashions count]; i++) {
         Fashion *fashion = _allFashions[i];
         fashion.satisfyCount = 0;
@@ -307,7 +323,6 @@
         }
         [collectionView.selectedIndexPaths addObject:indexPath];
         reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-        collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
         _fashion.age = [[FashionAge alloc]initWithType:row];
     }else if (collectionView == _styleCollectionView) {
         if (row == collectionView.selectedIndexPaths[0].row) {
@@ -315,7 +330,6 @@
         }
         [collectionView.selectedIndexPaths addObject:indexPath];
         reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-        collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
         _fashion.style = [[FashionStyle alloc]initWithType:row];
     }else if (collectionView == _materialCollectionView) {
         if (row == collectionView.selectedIndexPaths[0].row) {
@@ -323,7 +337,6 @@
         }
         [collectionView.selectedIndexPaths addObject:indexPath];
         reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-        collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
         _fashion.material = [[FashionMaterial alloc]initWithType:row];
     }else if (collectionView == _temperatureCollectionView) {
         if (row == collectionView.selectedIndexPaths[0].row) {
@@ -331,48 +344,40 @@
         }
         [collectionView.selectedIndexPaths addObject:indexPath];
         reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-        collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
         _fashion.temperature = [[FashionTemperature alloc]initWithType:row];
     }else if (collectionView == _extensionCollectionView) {
         if (row == 0) {
-            _fashion.extensions = [NSMutableArray new];
+            _fashion.extensions = [NSMutableArray arrayWithObject:[[FashionExtension alloc]initWithType:row]];
             if (row == collectionView.selectedIndexPaths[0].row) {
                 return;
             }
             [collectionView.selectedIndexPaths addObject:indexPath];
             reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-            collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
         }else{
             if (collectionView.selectedIndexPaths[0].row == 0) {
-                [_fashion.extensions addObject:[[FashionExtension alloc]initWithType:row]];
+                _fashion.extensions = [NSMutableArray arrayWithObject:[[FashionExtension alloc]initWithType:row]];
                 [collectionView.selectedIndexPaths addObject:indexPath];
                 reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-                collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
             }else{
-                if (collectionView.selectedIndexPaths[0].row == 0) {
+                BOOL selected = NO;
+                for (int i=0; i<[_fashion.extensions count]; i++) {
+                    if (_fashion.extensions[i].type == row) {
+                        selected = YES;
+                        [_fashion.extensions removeObjectAtIndex:i];
+                    }
+                }
+                if (!selected) {
+                    [_fashion.extensions addObject:[[FashionExtension alloc]initWithType:row]];
                     [collectionView.selectedIndexPaths addObject:indexPath];
                     reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-                    collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:indexPath];
-                }else{
-                    BOOL selected = NO;
-                    for (int i=0; i<[_fashion.extensions count]; i++) {
-                        if (_fashion.extensions[i].type == row) {
-                            selected = YES;
-                            [_fashion.extensions removeObjectAtIndex:i];
-                        }
-                    }
-                    if (!selected) {
-                        [_fashion.extensions addObject:[[FashionExtension alloc]initWithType:row]];
-                        [collectionView.selectedIndexPaths addObject:indexPath];
-                        reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-                    }else {
-                        reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
-                        [collectionView.selectedIndexPaths removeObject:indexPath];
-                        if ([collectionView.selectedIndexPaths count]==0) {
-                            NSIndexPath *defaultIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-                            collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:defaultIndexPath];
-                            [reloadIndexPaths addObject:defaultIndexPath];
-                        }
+                }else {
+                    reloadIndexPaths = [NSMutableArray arrayWithArray:collectionView.selectedIndexPaths];
+                    [collectionView.selectedIndexPaths removeObject:indexPath];
+                    if ([collectionView.selectedIndexPaths count]==0) {
+                        NSIndexPath *defaultIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                        collectionView.selectedIndexPaths = [NSMutableArray arrayWithObject:defaultIndexPath];
+                        _fashion.extensions = [NSMutableArray arrayWithObject:[[FashionExtension alloc]initWithType:0]];
+                        [reloadIndexPaths addObject:defaultIndexPath];
                     }
                 }
             }
@@ -404,6 +409,21 @@
         case 2:
             [self biography:@"荆轲传" sender:sender levels:10];
             break;
+        case 3:
+            [self biography:@"狄仁杰传" sender:sender levels:10];
+            break;
+        case 4:
+            [self biography:@"杨玉环传" sender:sender levels:10];
+            break;
+        case 5:
+            [self biography:@"婉儿传" sender:sender levels:10];
+            break;
+        case 6:
+            [self biography:@"寻龙传壹" sender:sender levels:10];
+            break;
+        case 7:
+            [self biography:@"寻龙传贰" sender:sender levels:10];
+            break;
         case 8:
             [self biography:@"寻龙传叁" sender:sender levels:10];
             break;
@@ -415,6 +435,9 @@
             break;
         case 11:
             [self biography:@"寻龙传陆" sender:sender levels:10];
+            break;
+        case 12:
+            [self biography:@"寻龙传柒" sender:sender levels:10];
             break;
         default:
             break;
@@ -444,16 +467,4 @@
     [self findFashion];
 }
 
--(void)fashionBiography:(UIButton *)sender numberOfAction:(NSInteger)count {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"蔡文姬传" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    for (int i = 0; i<9; i++) {
-        UIAlertAction *action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"第%d关",i+1] style:UIAlertActionStyleDefault handler:^(UIAlertAction *  action){
-            _fashion = [[Fashion alloc]initByBiography:sender.tag level:i];
-        }];
-        [alertController addAction:action];
-    }
-    alertController.popoverPresentationController.sourceView = sender;
-    alertController.popoverPresentationController.sourceRect = sender.bounds;
-    [self presentViewController:alertController animated:YES completion:nil];
-}
 @end

@@ -194,12 +194,12 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-        self.category = [FashionCategory new];
-        self.age = [FashionAge new];
-        self.style = [FashionStyle new];
-        self.material = [FashionMaterial new];
-        self.temperature = [FashionTemperature new];
-        self.extensions = [NSMutableArray new];
+        self.age = [[FashionAge alloc]initWithType:FashionAgeTypeNull];
+        self.style = [[FashionStyle alloc]initWithType:FashionStyleTypeNull];
+        self.material = [[FashionMaterial alloc]initWithType:FashionMaterialTypeNull];
+        self.temperature = [[FashionTemperature alloc]initWithType:FashionTemperatureTypeNull];
+        
+        self.extensions = [NSMutableArray arrayWithArray:@[[[FashionExtension alloc]initWithType:FashionExtensionTypeNull]]];
     }
     return self;
 }
@@ -301,6 +301,7 @@
 }
 
 -(void)setExtensionsType:(NSMutableArray *)extensionsType {
+    self.extensions = [NSMutableArray new];
     for (int i=0; i<[extensionsType count]; i++) {
         FashionExtension *extension = [[FashionExtension alloc]initWithType:[extensionsType[i] intValue]];
         [self.extensions addObject:extension];
@@ -523,94 +524,219 @@
             }
         }
             break;
+        case FashionBiographyXunlong1: {
+            switch (level) {
+                case 0: {
+                    self.styleType = FashionStyleTypeDignified;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.extensionsType = @[@(FashionExtensionTypeGuanfu)];
+                }
+                    break;
+                case 1: {
+                    self.styleType = FashionStyleTypeRomantic;
+                    self.materialType = FashionMaterialTypeLuxury;
+                    self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
+                    [MBProgressHUD showToast:@"保暖扣分"];
+                }
+                    break;
+                case 2: {
+                    self.ageType = FashionAgeTypeMatures;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.extensionsType = @[@(FashionExtensionTypePengren)];
+                }
+                    break;
+                case 3: {
+                    self.ageType = FashionAgeTypeYouth;
+                    self.styleType = FashionStyleTypeRomantic;
+                    self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
+                }
+                    break;
+                case 4: {
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeLifo)];
+                    [MBProgressHUD showToast:@"佛珠纳衣无隐藏分"];
+                }
+                    break;
+                case 5: {
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeWarm;
+                    self.extensionsType = @[@(FashionExtensionTypeYelu)];
+                }
+                    break;
+                case 6: {
+                    self.styleType = FashionStyleTypeBrave;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu)];
+                }
+                    break;
+                case 7: {
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeLifo)];
+                }
+                    break;
+                case 8: {
+                    self.styleType = FashionStyleTypeRomantic;
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu)];
+                }
+                    break;
+                case 9: {
+                    self.styleType = FashionStyleTypeLively;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeYundong)];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case FashionBiographyXunlong2: {
+            switch (level) {
+                case 0: {
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
+                }
+                    break;
+                case 1: {
+                    self.styleType = FashionStyleTypeBrave;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeYundong)];
+                }
+                    break;
+                case 2: {
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeYisheng)];
+                }
+                    break;
+                case 3: {
+                    self.ageType = FashionAgeTypeMatures;
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                }
+                    break;
+                case 4: {
+                    self.styleType = FashionStyleTypeLively;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                }
+                    break;
+                case 5: {
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
+                    [MBProgressHUD showToast:@"风流扣分"];
+                }
+                    break;
+                case 6: {
+                    self.styleType = FashionStyleTypeRomantic;
+                    self.materialType = FashionMaterialTypeLuxury;
+                    self.extensionsType = @[@(FashionExtensionTypeWudao)];
+                }
+                    break;
+                case 7: {
+                    self.styleType = FashionStyleTypeBrave;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu)];
+                    [MBProgressHUD showToast:@"黑"];
+                }
+                    break;
+                case 8: {
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeLuxury;
+                    self.extensionsType = @[@(FashionExtensionTypeWenren)];
+                }
+                    break;
+                case 9: {
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeWenren)];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
         case FashionBiographyXunlong3: {
             switch (level) {
                 case 0: {
-                    self.ageType = FashionAgeTypeMatures;
+                    self.styleType = FashionStyleTypeBrave;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeWarm;
+                    self.extensionsType = @[@(FashionExtensionTypeYelu)];
+                }
+                    break;
+                case 1: {
                     self.styleType = FashionStyleTypeRomantic;
                     self.materialType = FashionMaterialTypeLuxury;
                     self.temperatureType = FashionTemperatureTypeNormal;
                     self.extensionsType = @[@(FashionExtensionTypeShenxian)];
                 }
                     break;
-                case 1: {
-                    self.ageType = FashionAgeTypeYouth;
-                    self.styleType = FashionStyleTypeElegant;
-                    self.materialType = FashionMaterialTypeSimple;
-                    self.temperatureType = FashionTemperatureTypeWarm;
-                    self.extensionsType = @[@(FashionExtensionTypeShuijiao)];
-                }
-                    break;
                 case 2: {
-                    if ([FashionConfig shareConfig].isMale) {
-                        self.ageType = FashionAgeTypeMatures;
-                        self.styleType = FashionStyleTypeElegant;
-                        self.materialType = FashionMaterialTypeSimple;
-                        self.extensionsType = @[@(FashionExtensionTypeSangfu)];
-                    }else{
-                        self.ageType = FashionAgeTypeMatures;
-                        self.styleType = FashionStyleTypeDignified;
-                        self.materialType = FashionMaterialTypeSimple;
-                        self.extensionsType = @[@(FashionExtensionTypeSangfu)];
-                    }
+                    self.styleType = FashionStyleTypeBrave;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu)];
                 }
                     break;
                 case 3: {
-                    self.ageType = FashionAgeTypeMatures;
-                    self.styleType = FashionStyleTypeBrave;
                     self.materialType = FashionMaterialTypeSimple;
-                    self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYundong)];
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu)];
                 }
                     break;
                 case 4: {
-                    self.ageType = FashionAgeTypeYouth;
-                    self.styleType = FashionStyleTypeElegant;
-                    self.materialType = FashionMaterialTypeLuxury;
+                    self.styleType = FashionStyleTypeBrave;
+                    self.materialType = FashionMaterialTypeSimple;
                     self.temperatureType = FashionTemperatureTypeNormal;
-                    self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
-                    [MBProgressHUD showToast:@"白"];
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYelu)];
+                    [MBProgressHUD showToast:@"黑"];
                 }
                     break;
                 case 5: {
-                    if ([FashionConfig shareConfig].isMale) {
-                        self.ageType = FashionAgeTypeMatures;
-                        self.styleType = FashionStyleTypeElegant;
-                        self.materialType = FashionMaterialTypeSimple;
-                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypePengren)];
-                    }else{
-                        self.ageType = FashionAgeTypeMatures;
-                        self.styleType = FashionStyleTypeDignified;
-                        self.materialType = FashionMaterialTypeSimple;
-                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypePengren)];
-                    }
+                    self.styleType = FashionStyleTypeElegant;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeShuijiao)];
+                    [MBProgressHUD showToast:@"清凉、适温都可以"];
                 }
                     break;
                 case 6: {
-                    self.ageType = FashionAgeTypeYouth;
-                    self.styleType = FashionStyleTypeBrave;
-                    self.materialType = FashionMaterialTypeLuxury;
-                    self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYundong)];
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
                 }
                     break;
                 case 7: {
-                    self.ageType = FashionAgeTypeYouth;
-                    self.styleType = FashionStyleTypeLively;
-                    self.materialType = FashionMaterialTypeSimple;
-                    self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeJianghu)];
+                    self.styleType = FashionStyleTypeBrave;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeZhanzheng)];
                 }
                     break;
                 case 8: {
-                    self.ageType = FashionAgeTypeMatures;
                     self.styleType = FashionStyleTypeElegant;
-                    self.materialType = FashionMaterialTypeLuxury;
-                    self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
+                    self.extensionsType = @[@(FashionExtensionTypeJianghu)];
                 }
                     break;
                 case 9: {
-                    self.ageType = FashionAgeTypeMatures;
                     self.styleType = FashionStyleTypeElegant;
-                    self.materialType = FashionMaterialTypeLuxury;
+                    self.materialType = FashionMaterialTypeSimple;
+                    self.temperatureType = FashionTemperatureTypeNormal;
                     self.extensionsType = @[@(FashionExtensionTypeXiuxian)];
+                    [MBProgressHUD showToast:@"白"];
                 }
                     break;
                 default:
@@ -886,6 +1012,161 @@
                     break;
             }
         }
+            break;
+        case FashionBiographyXunlong7: {
+            if ([FashionConfig shareConfig].isMale) {
+                switch (level) {
+                    case 0: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    case 1: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    case 2: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYundong)];
+                    }
+                        break;
+                    case 3: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYundong)];
+                    }
+                        break;
+                    case 4: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYundong)];
+                    }
+                        break;
+                    case 5: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeYundong)];
+                    }
+                        break;
+                    case 6: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeWenren)];
+                    }
+                        break;
+                    case 7: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
+                    }
+                        break;
+                    case 8: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeLuxury;
+                        self.extensionsType = @[@(FashionExtensionTypeGuanfu),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    case 9: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeElegant;
+                        self.materialType = FashionMaterialTypeLuxury;
+                        self.extensionsType = @[@(FashionExtensionTypeGuanfu),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }else{
+                switch (level) {
+                    case 0: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeDignified;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    case 1: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeDignified;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    case 2: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeLively;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
+                    }
+                        break;
+                    case 3: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeBrave;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeYundong)];
+                    }
+                        break;
+                    case 4: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeBrave;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeYundong)];
+                    }
+                        break;
+                    case 5: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeLively;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeXiuxian),@(FashionExtensionTypeWenren)];
+                    }
+                        break;
+                    case 6: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeDignified;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeJianghu),@(FashionExtensionTypeWenren)];
+                    }
+                        break;
+                    case 7: {
+                        self.ageType = FashionAgeTypeYouth;
+                        self.styleType = FashionStyleTypeDignified;
+                        self.materialType = FashionMaterialTypeSimple;
+                        self.extensionsType = @[@(FashionExtensionTypeYanxi),@(FashionExtensionTypeWenren)];
+                    }
+                        break;
+                    case 8: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeDignified;
+                        self.materialType = FashionMaterialTypeLuxury;
+                        self.extensionsType = @[@(FashionExtensionTypeShenxian),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    case 9: {
+                        self.ageType = FashionAgeTypeMatures;
+                        self.styleType = FashionStyleTypeDignified;
+                        self.materialType = FashionMaterialTypeLuxury;
+                        self.extensionsType = @[@(FashionExtensionTypeShenxian),@(FashionExtensionTypeLifu)];
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+            break;
         default:
             break;
     }

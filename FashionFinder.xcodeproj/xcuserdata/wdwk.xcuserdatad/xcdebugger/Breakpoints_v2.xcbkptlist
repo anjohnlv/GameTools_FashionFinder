@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FashionFinder/FashionQueryViewController.m"
-            timestampString = "519621051.36719"
+            timestampString = "519809688.742445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
             landmarkName = "-collectionView:layout:sizeForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
