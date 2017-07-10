@@ -400,7 +400,7 @@
                     }
                         break;
                     case 3: {
-                        self.materialType = FashionStyleTypeRomantic;
+                        self.styleType = FashionStyleTypeRomantic;
                         self.extensionsType = @[@(FashionExtensionTypeWudao)];
                         [MBProgressHUD showToast:@"萧"];
                     }
@@ -486,7 +486,7 @@
                     self.materialType = FashionMaterialTypeLuxury;
                     self.temperatureType = FashionTemperatureTypeWarm;
                     self.extensionsType = @[@(FashionExtensionTypeHunqing)];
-                    [MBProgressHUD showToast:@"红"];
+                    [MBProgressHUD showToast:@"红，清凉扣分"];
                 }
                     break;
                 case 5: {

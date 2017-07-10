@@ -77,7 +77,6 @@
 }
 
 -(void)setSelectedIndexPaths:(NSMutableArray<NSIndexPath *> *)selectedIndexPaths {
-    NSLog(@"set");
     _selectedIndexPaths = selectedIndexPaths;
 }
 
