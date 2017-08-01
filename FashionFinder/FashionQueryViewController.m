@@ -92,7 +92,6 @@
     }];
     
     _fashionTableView = [FashionTableView new];
-    _fashionTableView.fashions = _allFashions;
     [self.view addSubview:_fashionTableView];
     [_fashionTableView mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.and.right.and.bottom.equalTo(self.view);
@@ -225,7 +224,6 @@
     [_styleCollectionView reloadData];
     [[FashionData shareFashion] updateAllFashions];
     _allFashions = [FashionData shareFashion].allFashions;
-    _fashionTableView.fashions = _allFashions;
     [self findFashion];
 }
 

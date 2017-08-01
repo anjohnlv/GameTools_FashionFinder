@@ -32,6 +32,7 @@
 }
 
 -(BOOL)saveNewFashion:(Fashion *)fashion {
+    fashion.index = [_allFashions count];
     NSDictionary *fashionInfo = [fashion dictionaryValue];
     [_allFashionsInfo addObject:fashionInfo];
     [_allFashions addObject:fashion];
@@ -45,7 +46,12 @@
 -(BOOL)deleteFashion:(Fashion *)fashion {
     [_allFashions removeObjectAtIndex:fashion.index];
     [_allFashionsInfo removeObjectAtIndex:fashion.index];
-    return [Sandbox saveFashions:_allFashionsInfo];
+    BOOL suc = [Sandbox saveFashions:_allFashionsInfo];
+    if (suc) {
+        for (int i=0; i<[_allFashions count]; i++) {
+            _allFashions[i].index = i;
+        }
+    }
+    return suc;
 }
-
 @end

@@ -10,7 +10,7 @@
 #import "Fashion.h"
 @interface FashionData : NSObject
 @property(nonatomic, strong)NSMutableArray *allFashionsInfo;
-@property(nonatomic, strong)NSMutableArray *allFashions;
+@property(nonatomic, strong)NSMutableArray<Fashion *> *allFashions;
 +(instancetype)shareFashion;
 -(BOOL)saveNewFashion:(Fashion *)fashion;
 -(void)updateAllFashions;

@@ -11,6 +11,5 @@
 
 @interface FashionTableView : UITableView<UITableViewDelegate, UITableViewDataSource>
 
-@property(nonatomic, strong)NSMutableArray<Fashion *> *fashions;
 
 @end

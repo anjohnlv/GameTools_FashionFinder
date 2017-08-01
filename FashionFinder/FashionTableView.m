@@ -349,7 +349,7 @@ static NSString *kCellIdentifier = @"FashionCell";
     jewelryFashions = [NSMutableArray new];
     clothesFashions = [NSMutableArray new];
     decorateFashions = [NSMutableArray new];
-    for (Fashion *fashion in _fashions) {
+    for (Fashion *fashion in [FashionData shareFashion].allFashions) {
         switch (fashion.category.type) {
             case FashionCategoryTypeHairstyle:
                 [self sortFashion:fashion inArray:hairstyleFashions];
