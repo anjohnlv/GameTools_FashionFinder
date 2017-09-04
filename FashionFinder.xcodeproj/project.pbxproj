@@ -22,10 +22,10 @@
 		2B6D82CB1EE79E750055C130 /* FashionInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D82CA1EE79E750055C130 /* FashionInsertViewController.m */; };
 		2B853EBC1EE4F4020082C1FF /* PropertyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B853EBB1EE4F4020082C1FF /* PropertyCollectionView.m */; };
 		2B853EBF1EE4F9610082C1FF /* FashionQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B853EBE1EE4F9610082C1FF /* FashionQueryViewController.m */; };
-		2B9B67DF1F30304200687CB2 /* fashions_female.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B9B67DD1F30304200687CB2 /* fashions_female.plist */; };
-		2B9B67E01F30304200687CB2 /* fashions_male.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B9B67DE1F30304200687CB2 /* fashions_male.plist */; };
 		2BE2D3711E971829007D746D /* FashionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2D3701E971829007D746D /* FashionTableView.m */; };
 		784B25784019A58E82389E63 /* libPods-FashionFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */; };
+		82B035071F5CE4EE00659CB6 /* fashions_male.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82B035051F5CE4EE00659CB6 /* fashions_male.plist */; };
+		82B035081F5CE4EE00659CB6 /* fashions_female.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82B035061F5CE4EE00659CB6 /* fashions_female.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,11 +58,11 @@
 		2B853EBB1EE4F4020082C1FF /* PropertyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyCollectionView.m; sourceTree = "<group>"; };
 		2B853EBD1EE4F9610082C1FF /* FashionQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionQueryViewController.h; sourceTree = "<group>"; };
 		2B853EBE1EE4F9610082C1FF /* FashionQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionQueryViewController.m; sourceTree = "<group>"; };
-		2B9B67DD1F30304200687CB2 /* fashions_female.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fashions_female.plist; sourceTree = "<group>"; };
-		2B9B67DE1F30304200687CB2 /* fashions_male.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_male.plist; sourceTree = "<group>"; };
 		2BE2D36F1E971829007D746D /* FashionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FashionTableView.h; sourceTree = "<group>"; };
 		2BE2D3701E971829007D746D /* FashionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FashionTableView.m; sourceTree = "<group>"; };
 		52C76AF23B6A57156ADD118E /* libPods-FashionFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FashionFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82B035051F5CE4EE00659CB6 /* fashions_male.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_male.plist; sourceTree = "<group>"; };
+		82B035061F5CE4EE00659CB6 /* fashions_female.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fashions_female.plist; sourceTree = "<group>"; };
 		E7410AC14A08A3AD1C34D335 /* Pods-FashionFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FashionFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FashionFinder/Pods-FashionFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		FE59BA6D5599B20324FD499C /* Pods-FashionFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FashionFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FashionFinder/Pods-FashionFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,9 +135,9 @@
 				2B091E581E8C93FA005C74F0 /* Assets.xcassets */,
 				2B6513141EF8C975007AED6A /* launch.png */,
 				2B091E5A1E8C93FA005C74F0 /* LaunchScreen.storyboard */,
-				2B9B67DD1F30304200687CB2 /* fashions_female.plist */,
-				2B9B67DE1F30304200687CB2 /* fashions_male.plist */,
 				2B091E5D1E8C93FA005C74F0 /* Info.plist */,
+				82B035051F5CE4EE00659CB6 /* fashions_male.plist */,
+				82B035061F5CE4EE00659CB6 /* fashions_female.plist */,
 				2B091E491E8C93FA005C74F0 /* Supporting Files */,
 			);
 			path = FashionFinder;
@@ -221,10 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6513151EF8C975007AED6A /* launch.png in Resources */,
+				82B035071F5CE4EE00659CB6 /* fashions_male.plist in Resources */,
 				2B091E5C1E8C93FA005C74F0 /* LaunchScreen.storyboard in Resources */,
-				2B9B67DF1F30304200687CB2 /* fashions_female.plist in Resources */,
+				82B035081F5CE4EE00659CB6 /* fashions_female.plist in Resources */,
 				2B091E591E8C93FA005C74F0 /* Assets.xcassets in Resources */,
-				2B9B67E01F30304200687CB2 /* fashions_male.plist in Resources */,
 				2B091E541E8C93FA005C74F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
